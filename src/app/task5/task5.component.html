@@ -1,0 +1,24 @@
+<h2>Employee Details</h2>
+<input #t1 type="text" placeholder="enter the id"><br><br>
+<input #t2 type="text" placeholder="enter the name"><br><br>
+<input #t3 type="text" placeholder="enter the salary"><br><br>
+<button (click)="add(t1.value,t2.value,t3.value)">add</button>&nbsp;
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody  *ngFor="let a of arrObj;index as i">
+        <tr >
+            <td>{{a.id}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.salary}}</td>
+            <td><button (click)="remove(i)">remove</button></td>
+        </tr>
+    </tbody>
+</table>

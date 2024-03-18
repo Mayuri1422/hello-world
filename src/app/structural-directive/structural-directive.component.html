@@ -1,0 +1,42 @@
+<p>structural-directive works!</p>
+<!-- 
+    You can update your DOM Structure dynamically
+    *->indicates it is structural directive
+    1.*ngIf->to check condition & show/hide your DOM Element
+    2.*ngFor->to iterate dynamically a data to display
+    3.*ngSwitch->to execute a specific case
+
+ -->
+
+ <!-- 
+    1.*ngIf (If Directive)->
+
+    Syntax->
+    *ngIf="condition"
+    You can apply on any HTML Tag but mostly used on <div>
+
+  -->
+
+  <div *ngIf="ratings<5; else myelse"><!-- No any else directive present-->
+    <!-- myelse->Template Reference Variable Name -->
+    Condition is true
+  </div>
+
+  <!-- 
+    Note->If we use else then use <ng-template> is mandatory
+   -->
+
+   <!-- 
+    <ng-template>->Component Directive->
+        Initially to hide data ,to show data on condition base .
+        It is not work with *ngIf
+        Usage->To show popup box after click <ng-template> is used
+
+    -->
+
+  <ng-template #myelse><!-- #myelse->Template Reference Variable -->
+    Condition is false
+    <br><br>
+    <img src="../../assets/a1.jpg" alt="">
+    <!-- We can use any tag here -->
+  </ng-template>

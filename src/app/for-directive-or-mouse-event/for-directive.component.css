@@ -1,0 +1,19 @@
+table,th,td
+{
+    border: 1px solid ;
+    border-collapse: collapse;
+    text-align: center;
+}
+.heighlight{
+    background-color: pink;
+}
+.name
+{
+    background-color: blue;
+    color:white;
+}
+.price
+{
+    background-color: green;
+    color: white;
+}

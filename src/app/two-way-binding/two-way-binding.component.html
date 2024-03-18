@@ -1,0 +1,28 @@
+<p>two-way-binding works!</p>
+<!-- 
+    view to component->event binding
+    component to view->data binding(property binding)
+    two binding merges i.e we are sending and receiving data
+    Angular done two way binding by using ngModel directive
+
+ -->
+
+ <!-- 
+    ngModel Directive->
+     It is attribute directive
+     we have to import FormsModule
+     Used Notation-> [()]->Banana in the Box
+     []->box indicates property binding
+     ()->banana indicates event binding
+     Syntax->[(ngModel)]="property-name"
+     You can apply on any HTML Tag
+     It works as two way binding
+     Always updated data is present in property-name
+     to update data,to register data use two way binding
+
+  -->
+
+  <input type="text" [(ngModel)]="name">
+  {{name}}
+  <br><br>
+  <button (click)="onClick(name)">Send</button>

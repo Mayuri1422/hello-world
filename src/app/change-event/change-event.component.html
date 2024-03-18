@@ -1,0 +1,22 @@
+<p>change-event works!</p>
+<!-- Applicable on any HTML Tag but generally on input box -->
+
+<input  type="text" (change)="onChange()" placeholder="enter the name"><br><br>
+
+<h2>Task</h2>
+<input #t1 type="text" (change)="onChange1(t1.value)">
+<!-- 
+    focus->cursor blinking
+    perform activities->writing
+
+    Releasing Focus:
+    click outside textbox,
+    TAB key press
+    ENTER key press(No Authentic Way)
+   
+ -->
+
+ <!-- 
+    Real Time Example
+    GitHub->Check uname is already available or not
+  -->

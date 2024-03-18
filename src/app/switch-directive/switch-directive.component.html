@@ -1,0 +1,45 @@
+<p>switch-directive works!</p>
+<!-- 
+    It executes specific condition
+    Applicable on any Tag but generally used for <div>
+ -->
+
+ <input #color type="text" placeholder="enter the color name">
+ <br><br>
+ <button (click)="onClick(color.value)">send</button>
+ <br><br>
+
+ <!-- Practice -->
+<!-- <select  #color (click)="onClick(color.value)">
+<option>Pink</option>
+<option>Blue</option>
+<option>Green</option>
+<option>Black</option>
+<option>Violet</option>
+</select>
+<br><br> -->
+
+<div [ngSwitch]="choice">
+<div *ngSwitchCase="'pink'" [style.background]="choice">
+    Your Color Name is {{choice}}
+</div>
+
+<div *ngSwitchCase="'blue'" [style.background]="choice">
+    Your Color Name is {{choice}}
+</div>
+
+<div *ngSwitchCase="'green'" [style.background]="choice">
+     Your Color Name is {{choice}}
+</div>
+
+<!-- <div *ngSwitchDefault [style.background]="choice===''?'black':'orange'" [style.color]="choice===''?'white':'black'">
+    Your Color Name is Wrong
+</div> -->
+
+<div *ngSwitchDefault [ngStyle]="{
+    'background':choice===''?'black':'orange',
+    'color':choice===''?'white':'black'
+}">
+    Your Color Name is Wrong {{choice}}
+</div>
+</div>  

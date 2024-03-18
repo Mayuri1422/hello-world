@@ -1,0 +1,31 @@
+<!-- Property Binding
+-It works on property
+-If you want bind dynamic data to any attribute(html attribute,directive attribute,custom attribute)
+-You can apply on all HTML attribute
+-syntax->[attribute-name]="property-name" -->
+
+<p>property-binding works!</p>
+<input type="text" [value]="name">
+<img [src]="image" alt="">
+<hr>
+
+<!-- Difference Between String Interpolation and Property Binding -->
+
+<!-- String Interpolation
+-It internally convert property into string format
+-double curly bracket{{}} used
+-It can be applicable on any tag -->
+
+<!-- Property Binding
+-property type is as it it is set to the particular attribute
+-square bracket[] used
+-It can applicable on any attribute and custom directive -->
+
+<!-- Example -->
+<div hidden="{{hidden}}">
+    Display Text Using String Interpolation
+</div>
+
+<div [hidden]="hidden">
+Display Text Using Property Binding
+</div>

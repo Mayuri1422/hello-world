@@ -1,0 +1,12 @@
+<p>event-binding works!</p>
+<!-- Data flow from View File to Component File -->
+<!-- Syntax-> (event-name)="event-handler" -->
+<!-- We can apply on any HTML Tag -->
+
+<!-- Click Event -->
+<button (click)="onClick()">Click Event(Event-Binding)</button>
+<hr>
+<!-- src="../../assets/a1.jpg" not dynamic -->
+<img src="../../assets/a1.jpg" alt="" (click)="onImageClick()" title="Click On Image">
+<hr>
+<img [src]="myImage" alt="" title="Click On Image" (click)="clickOnImage()">

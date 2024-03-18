@@ -1,0 +1,75 @@
+<p>inbuildpipe works!</p>
+<!-- 
+    #pipe
+    -It transform your data to the end user
+    -Formatting data and showing to the end user
+    -Example->product name in bold 
+    -It does not affect your original data
+    -pipe always applied on property
+    -Syntax-> {{propertyname | pipename}}
+    -|(Indicates Pipe)
+ -->
+
+ <!-- String Pipes -->
+
+ <!-- {{strData}}<br> -->
+ <!-- {{strData | uppercase}} -->
+ <!-- {{strData | lowercase}} -->
+ <!-- {{strData | titlecase}} -->
+ <!-- {{strData | slice:1:6}}   slice->Copy Section Of Data
+                                1st parameter is compulasary
+                                2nd parameter is optional
+                                :(means sending parameters) -->
+ <!-- {{strData | slice:5}} -->
+
+
+ <!-- Percent Pipe(Converting Into Percentage) -->
+
+ <!-- <h2>{{0.25}}</h2> -->
+<!-- <h2>{{0.25 | percent}}</h2> (0.25 is backend data) -->
+<!-- <h2>{{0.025 | percent}}</h2> -->
+    <!-- expected=2.5%
+     output=3%(RoundOff)  -->
+<!-- <h2>{{0.025 | percent:'1.1'}}</h2> -->
+<!-- <h2>{{0.091 | percent:'2.2'}}</h2> output=09.10% -->
+<!-- <h2>{{0.09123 | percent:'2.2'}}</h2>  -->
+
+
+<!-- Currency Pipe -->
+
+<!-- <h2>{{0.25 | currency}}</h2> -->
+<!-- by default $ currency notation applied -->
+<!-- <h2>{{0.25 | currency:'INR'}}</h2>₹(currency notation)0.25 -->
+<!-- <h2>{{0.25 | currency:'INR':'code'}} -->
+    <!-- code->Other Country can recognize it by code -->
+<!-- <h2>{{0.25 | currency:'GBP'}} -->
+
+
+<!-- Number Pipe -->
+<!-- Used for stock market application, ERP application -->
+
+<!-- <h2>{{5.6783462 | number:'1.2-3'}}</h2> -->
+<!-- <h2>{{5.678456 | number:'1.2-3'}}</h2> -->
+<!-- <h2>{{5.678556 | number:'2.2-3'}}</h2> -->
+<!-- <h2>{{5.6 | number:'2.2-3'}}</h2> -->
+<!-- <h2>{{5.678556 | number:'2.4-6'}}</h2> -->
+<!-- <h2>{{5.555556 | number:'2.2-3'}}</h2> -->
+<!-- <h2>{{6.555500 | number:'2.2-3'}}</h2> -->
+<!-- <h2>{{65.678556 | number:'1.2-3'}}</h2> -->
+<!-- <h2>{{num2 | number:'1.2-3'}}</h2> -->
+
+
+<!-- Date Pipe -->
+<!-- <h2>{{mydate}}</h2> -->
+<!-- <h2>{{mydate | date:'mediumDate'}}</h2> -->
+<!-- <h2>{{mydate | date:'shortDate'}}</h2> -->
+<!-- <h2>{{mydate | date:'longDate'}}</h2> -->
+<!-- <h2>{{mydate | date:'dd-mm-yyyy'}}</h2> -->
+<!-- <h2>{{mydate | date:'dd/mm/yyyy'}}</h2> -->
+<!-- <h2>{{mydate | date:'dd ,mm, yyyy'}}</h2> -->
+<!-- <h2>{{mydate | date:'dd'}}</h2> -->
+<!-- <h2>{{mydate | date:'MM'}}</h2> -->
+<!-- <h2>{{mydate | date:'yyyy'}}</h2> -->
+
+<!-- Showing Time -->
+<!-- <h2>{{mydate | date:'hh:mm:ss a'}}</h2> -->

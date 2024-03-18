@@ -1,0 +1,40 @@
+<b><p>parent works!</p></b>
+{{strDataRecieved}}
+<br>
+
+
+<h4>Product Details</h4>
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of arrayObjectRecieved;index as i">
+            <td>{{a.pid}}</td>
+            <td>{{a.pname}}</td>
+            <td>{{a.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4>jsonObject</h4>
+Id:{{jsonObjectRecived.pid}}<br>
+Name:{{jsonObjectRecived.pname}}<br>
+Price:{{jsonObjectRecived.price}}<br>
+<hr>
+
+
+<!-- 
+    parent to child sending data(any type of data )(create data dynamically)
+    we have to make custom attribute and then property bind -->
+<app-child1 [parentJson]="json" [parentStrData]="strData" [parentArrayObj]="arryObj"></app-child1>
+
+
+<hr>
+<app-child2 (child2StrEvent)="strDataRecieved=$event" (childArrayObject)="arrayObjectRecieved=$event" (childJsonObject)="jsonObjectRecived=$event"></app-child2>
+

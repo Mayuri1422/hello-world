@@ -1,0 +1,7 @@
+<input #num type="text" placeholder="enter the number">
+<br>
+<input type="radio" name="a1" (click)="onClickS(num.value)" >square
+<br>
+<input type="radio" name="a1" (click)="onClickC(num.value)">Cube
+<br>
+<input type="text" placeholder="Result" [value]="result1">

@@ -1,0 +1,32 @@
+<p>template-ref-variable works!</p>
+<!-- 
+    It gives the DOM Element Information
+    It is also a JSON Object
+    It holds the object and handles the particular HTML Element
+    You can access data as well as manipulate data
+    Use # symbol to create a Template Reference Variable on each HTML Element
+    Give a unique name
+    You can create any HTML Tag
+    No any sequence to maintain
+
+    Advantage->You can access as well as manipulate data
+
+ -->
+
+ <input type="text" placeholder="enter the name" #inputName>
+ <!-- inputName->holds object of HTML Element -->
+ <br><br>
+ <button (click)="onClick(inputName)">Send</button>
+ <!-- <button (click)="onClick(inputName.value)">Send</button> -->
+ <hr>
+ 
+ <h2> Real Time Example</h2>
+ <label>Number1:</label>&nbsp;&nbsp;
+ <input #n1 type="text" placeholder="enter the number1">
+ <br><br>
+ <label>Number2:</label>&nbsp;&nbsp;
+ <input #n2  type="text" placeholder="enter the number2">
+ <br><br>
+ <button (click)="add(n1.value,n2.value)">Addition</button>
+ <br><br>
+ <input [value]="result" type="text" placeholder="result">

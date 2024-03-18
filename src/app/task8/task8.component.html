@@ -1,0 +1,8 @@
+<p>task8 works!</p>
+<h4>Number={{n}}</h4>
+<div *ngIf="n%2==0;else myelse">
+     {{n}} is Even Number
+</div>
+<ng-template #myelse>
+     {{n}} is Odd Number
+</ng-template>

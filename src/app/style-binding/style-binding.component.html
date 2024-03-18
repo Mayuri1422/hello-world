@@ -1,0 +1,23 @@
+<!-- Style Binding
+-It apply dynamically style to particular html element
+-syntax->[style.css-property-name]="property-name"
+-You can apply on all HTML Tags 
+-Apply Style Binding on condition -->
+
+<p>style-binding works!</p>
+<h2 [style.color]="color_name">Apply Style Binding</h2>
+<div [style.color]="border_ratings<5?'Pink':'Blue'">
+    Division Tag
+</div>
+
+<!-- Multiple CSS Property -->
+<!-- 1st Directive->ngStyle
+-It is Attribute Directive
+-You can apply on any HTML Tag
+-Used to apply one or more CSS Property at same time
+-It take JSON Object to set property
+-Syntax->[ngStyle]="jsonObject" -->
+
+<div [ngStyle]="jsonObj">
+Applying ngstyle attribute directive
+</div>

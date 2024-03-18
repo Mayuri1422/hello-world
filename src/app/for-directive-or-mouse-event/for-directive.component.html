@@ -1,0 +1,59 @@
+<p>for-directive works!</p>
+<!-- 
+    Usage->for dynamic iteration
+    It always work on Array
+    It works/iterate element by element
+    You can apply on any HTML Tag
+    Apply on that tag which we want to render
+    Example->Amazon products are change every time dynamically
+    Syntax->
+    *ngFor="let variable_name of array_name"
+    let->Use always let keyword to create variable in view file
+    of->keyword
+    variable-name->current index data it hold 
+ -->
+ <ul type="square">
+    <li *ngFor="let item of a">{{item}}</li>
+ </ul>
+ <hr>
+ <ol type="A">
+    <li *ngFor="let item of a">{{item}}</li>
+ </ol>
+
+ <!-- 
+    Always data is not in array form 
+    It may be in array of object form
+    But for only object it is not applicable
+  -->
+
+  <hr>
+  <h2>Product Details</h2>
+  <table>
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of a1;index as i" (mouseover)="onMouseOver(product)" 
+        [ngClass]="{
+            'heighlight':selector===product.name
+        }"
+        (mouseout)="onMouseOut()"
+        >
+            <td>{{i+1}}</td>
+            <td [ngClass]="{
+                'name':selector===product.name
+            }">{{product.name}}</td>
+            <td [ngClass]="{
+                'price':selector==product.name
+            }">{{product.price}}</td>
+            <td>{{product.qty}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  
